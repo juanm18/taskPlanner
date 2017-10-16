@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>The Task Organizer</title>
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="config.js"></script>
+    <script src="factory/taskfactory.js"></script>
+    <script src="controller/createtask.js"></script>
+    <script src="controller/showtask.js"></script>
+    <script src="controller/validation.js"></script>
+  </head>
+  <body>
+    <h1>Welcome To The Task Manager</h1>
+    <a href='#!/tasks'>My Tasks</a>
+    <div ng-view=""></div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<h2>Hello, {{Name}}</h2>
+<h3>To Do:</h3>
+<ul ng-model="newTask.status">
+  <li ng-repeat='t in tasks | filter:"ToDo"'>{{t.task}}
+    <button id='doingbtn' ng-click="updateStatus(t, 'doing')">Doing</button>
+  </li>
+</ul>
+<br>
+<h3>Done:</h3>
+<ul ng-model="newTask.status">
+  <li ng-repeat='t in tasks | filter:"doing"'>{{t.task}}
+    <button id='donebtn' ng-click="updateStatus(t, 'done')">Done</button>
+  </li>
+</ul>
+<br>
+<h3>Done</h3>
+<ul ng-model="newTask.status">
+  <li ng-repeat='t in tasks | filter:"done"'>{{t.task}}
+    <button id='hidebtn' ng-click="updateStatus(t, 'hide')">Hide</button>
+  </li>
+</ul>
+<a href="#!/">LogOut</a> | <a href="#!/create">Create New Task</a>
